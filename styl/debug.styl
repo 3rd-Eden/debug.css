@@ -1,9 +1,25 @@
 debug()
   warning()
     outline: 1px solid orange
+    position: relative
+
+    &:after
+      background: orange
+      color: #FFF
+      font-weight: 600
+      padding: 5px
+      position: absolute
 
   error()
     outline: 1px solid red
+    position: relative
+
+    &:after
+      background: red
+      color: #FFF
+      font-weight: 600
+      padding: 5px
+      position: absolute
 
   [style]:not([scoped])
     warning()

@@ -1,23 +1,34 @@
-html.debug [style]:not([scoped]){outline:1px solid #ffa500;}
+html.debug [style]:not([scoped]){outline:1px solid #ffa500;position:relative;}
+html.debug [style]:not([scoped]):after{background:#ffa500;color:#fff;font-weight:600;padding:5px;position:absolute}
 html.debug [style]:not([scoped]):after{content:"Don't use inline styles, replace it with external CSS definitions"}
-html.debug a[href*="javascript"]{outline:1px solid #f00;}
+html.debug a[href*="javascript"]{outline:1px solid #f00;position:relative;}
+html.debug a[href*="javascript"]:after{background:#f00;color:#fff;font-weight:600;padding:5px;position:absolute}
 html.debug a[href*="javascript"]:after{content:"Don't use inline javascript, replace it with external JS files."}
-html.debug a:not([href]):not([name]),html.debug a[href=""]:not([name]){outline:1px solid #f00;}
+html.debug a:not([href]):not([name]),html.debug a[href=""]:not([name]){outline:1px solid #f00;position:relative;}
+html.debug a:not([href]):not([name]):after,html.debug a[href=""]:not([name]):after{background:#f00;color:#fff;font-weight:600;padding:5px;position:absolute}
 html.debug a:not([href]):not([name]):after,html.debug a[href=""]:not([name]):after{content:"Missing or empty href attribute."}
-html.debug img:not([alt]),html.debug img[alt=""]{outline:1px solid #f00;}
+html.debug img:not([alt]),html.debug img[alt=""]{outline:1px solid #f00;position:relative;}
+html.debug img:not([alt]):after,html.debug img[alt=""]:after{background:#f00;color:#fff;font-weight:600;padding:5px;position:absolute}
 html.debug img:not([alt]):after,html.debug img[alt=""]:after{content:"Missing alt attribute."}
-html.debug img:not([src]),html.debug img[src=""],html.debug video:not([src]),html.debug video[src=""],html.debug audio:not([src]),html.debug audio[src=""]{outline:1px solid #f00;}
+html.debug img:not([src]),html.debug img[src=""],html.debug video:not([src]),html.debug video[src=""],html.debug audio:not([src]),html.debug audio[src=""]{outline:1px solid #f00;position:relative;}
+html.debug img:not([src]):after,html.debug img[src=""]:after,html.debug video:not([src]):after,html.debug video[src=""]:after,html.debug audio:not([src]):after,html.debug audio[src=""]:after{background:#f00;color:#fff;font-weight:600;padding:5px;position:absolute}
 html.debug img:not([src]):after,html.debug img[src=""]:after,html.debug video:not([src]):after,html.debug video[src=""]:after,html.debug audio:not([src]):after,html.debug audio[src=""]:after{content:"Missing src attribute."}
-html.debug iframe{outline:1px solid #ffa500;}
+html.debug iframe{outline:1px solid #ffa500;position:relative;}
+html.debug iframe:after{background:#ffa500;color:#fff;font-weight:600;padding:5px;position:absolute}
 html.debug iframe:after{content:"The use of iframes increases the loading times of your page."}
-html.debug embed,html.debug object{outline:1px solid #ffa500;}
+html.debug embed,html.debug object{outline:1px solid #ffa500;position:relative;}
+html.debug embed:after,html.debug object:after{background:#ffa500;color:#fff;font-weight:600;padding:5px;position:absolute}
 html.debug embed:after,html.debug object:after{content:"Use native HTML5 implementions instead of plugins."}
-html.debug acronym,html.debug applet,html.debug basefont,html.debug big,html.debug center,html.debug dir,html.debug font,html.debug frame,html.debug frameset,html.debug isindex,html.debug layer,html.debug marquee,html.debug menu,html.debug nobr,html.debug noembed,html.debug noframes,html.debug nolayer,html.debug plaintext,html.debug spacer,html.debug strike,html.debug u,html.debug xml,html.debug xmp{outline:1px solid #f00;}
+html.debug acronym,html.debug applet,html.debug basefont,html.debug big,html.debug center,html.debug dir,html.debug font,html.debug frame,html.debug frameset,html.debug isindex,html.debug layer,html.debug marquee,html.debug menu,html.debug nobr,html.debug noembed,html.debug noframes,html.debug nolayer,html.debug plaintext,html.debug spacer,html.debug strike,html.debug u,html.debug xml,html.debug xmp{outline:1px solid #f00;position:relative;}
+html.debug acronym:after,html.debug applet:after,html.debug basefont:after,html.debug big:after,html.debug center:after,html.debug dir:after,html.debug font:after,html.debug frame:after,html.debug frameset:after,html.debug isindex:after,html.debug layer:after,html.debug marquee:after,html.debug menu:after,html.debug nobr:after,html.debug noembed:after,html.debug noframes:after,html.debug nolayer:after,html.debug plaintext:after,html.debug spacer:after,html.debug strike:after,html.debug u:after,html.debug xml:after,html.debug xmp:after{background:#f00;color:#fff;font-weight:600;padding:5px;position:absolute}
 html.debug acronym:after,html.debug applet:after,html.debug basefont:after,html.debug big:after,html.debug center:after,html.debug dir:after,html.debug font:after,html.debug frame:after,html.debug frameset:after,html.debug isindex:after,html.debug layer:after,html.debug marquee:after,html.debug menu:after,html.debug nobr:after,html.debug noembed:after,html.debug noframes:after,html.debug nolayer:after,html.debug plaintext:after,html.debug spacer:after,html.debug strike:after,html.debug u:after,html.debug xml:after,html.debug xmp:after{content:"These elements have been depricated from the HTML specification."}
-html.debug br[clear]{outline:1px solid #f00;}
+html.debug br[clear]{outline:1px solid #f00;position:relative;}
+html.debug br[clear]:after{background:#f00;color:#fff;font-weight:600;padding:5px;position:absolute}
 html.debug br[clear]:after{content:"Don't use the clear attribute on <br> tags."}
-html.debug [link],html.debug [vlink],html.debug [alink],html.debug [background],html.debug [bgcolor]{outline:1px solid #f00;}
+html.debug [link],html.debug [vlink],html.debug [alink],html.debug [background],html.debug [bgcolor]{outline:1px solid #f00;position:relative;}
+html.debug [link]:after,html.debug [vlink]:after,html.debug [alink]:after,html.debug [background]:after,html.debug [bgcolor]:after{background:#f00;color:#fff;font-weight:600;padding:5px;position:absolute}
 html.debug [link]:after,html.debug [vlink]:after,html.debug [alink]:after,html.debug [background]:after,html.debug [bgcolor]:after{content:"Styling should be done with CSS, not using CSS attributes."}
-html.debug [onmouseover],html.debug [onmouseout],html.debug [onmousedown],html.debug [onmouseup],html.debug [onclick],html.debug [ondblclick],html.debug [onmousemove],html.debug [onload],html.debug [onerror],html.debug [onbeforeunload],html.debug [onfocus],html.debug [onblur],html.debug [ontouchstart],html.debug [ontouchend],html.debug [ontouchmove]{outline:1px solid #f00;}
+html.debug [onmouseover],html.debug [onmouseout],html.debug [onmousedown],html.debug [onmouseup],html.debug [onclick],html.debug [ondblclick],html.debug [onmousemove],html.debug [onload],html.debug [onerror],html.debug [onbeforeunload],html.debug [onfocus],html.debug [onblur],html.debug [ontouchstart],html.debug [ontouchend],html.debug [ontouchmove]{outline:1px solid #f00;position:relative;}
+html.debug [onmouseover]:after,html.debug [onmouseout]:after,html.debug [onmousedown]:after,html.debug [onmouseup]:after,html.debug [onclick]:after,html.debug [ondblclick]:after,html.debug [onmousemove]:after,html.debug [onload]:after,html.debug [onerror]:after,html.debug [onbeforeunload]:after,html.debug [onfocus]:after,html.debug [onblur]:after,html.debug [ontouchstart]:after,html.debug [ontouchend]:after,html.debug [ontouchmove]:after{background:#f00;color:#fff;font-weight:600;padding:5px;position:absolute}
 html.debug [onmouseover]:after,html.debug [onmouseout]:after,html.debug [onmousedown]:after,html.debug [onmouseup]:after,html.debug [onclick]:after,html.debug [ondblclick]:after,html.debug [onmousemove]:after,html.debug [onload]:after,html.debug [onerror]:after,html.debug [onbeforeunload]:after,html.debug [onfocus]:after,html.debug [onblur]:after,html.debug [ontouchstart]:after,html.debug [ontouchend]:after,html.debug [ontouchmove]:after{content:"Use proper event listeners instead of event attributes."}
 
