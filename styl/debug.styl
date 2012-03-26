@@ -1,0 +1,124 @@
+.warning
+  outline: 1px solid orange
+
+.error
+  outline: 1px solid red
+
+[style]:not([scoped])
+  @extend .warning
+
+  &:after
+    content: "Don't use inline styles, replace it with external CSS definitions"
+
+a[href*="javascript"]
+  @extend .error
+
+  &:after
+    content: "Don't use inline javascript, replace it with external JS files."
+
+// missing required attributes on elements
+a:not([href]):not([name])
+a[href=""]:not([name])
+  @extend .error
+
+  &:after
+    content: "Missing or empty href attribute."
+
+img:not([alt])
+img[alt=""]
+  @extend .error
+
+  &:after
+    content: "Missing alt attribute."
+
+img:not([src])
+img[src=""]
+video:not([src])
+video[src=""]
+audio:not([src])
+audio[src=""]
+  @extend .error
+
+  &:after
+    content: "Missing src attribute."
+
+// The following batch of rules are there to adivice the user of possible
+// performance hit's that might be introduced
+iframe
+  @extend .warning
+
+  &:after
+    content: "The use of iframes increases the loading times of your page."
+
+embed
+object
+  @extend .warning
+
+  &:after
+    content: "Use native HTML5 implementions instead of plugins."
+
+// Deplicated elements, these should not be used any more, unless there's a pretty
+// good reason for it.
+acronym
+applet
+basefont
+big
+center
+dir
+font
+frame
+frameset
+isindex
+layer
+marquee
+menu
+nobr
+noembed
+noframes
+nolayer
+plaintext
+spacer
+strike
+u
+xml
+xmp
+  @extend .error
+
+  &:after
+    content: "These elements have been depricated from the HTML specification."
+
+br[clear]
+  @extend .error
+
+  &:after
+    content: "Don't use the clear attribute on <br> tags."
+
+[link]
+[vlink]
+[alink]
+[background]
+[bgcolor]
+  @extend .error
+
+  &:after
+    content: "Styling should be done with CSS, not using CSS attributes."
+
+[onmouseover]
+[onmouseout]
+[onmousedown]
+[onmouseup]
+[onclick]
+[ondblclick]
+[onmousemove]
+[onload]
+[onerror]
+[onbeforeunload]
+[onfocus]
+[onblur]
+[ontouchstart]
+[ontouchend]
+[ontouchmove]
+  @extend .error
+
+  &:after
+    content: "Use proper event listeners instead of event attributes."
